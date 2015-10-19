@@ -1,0 +1,73 @@
+<!-- Navigation bar
+
+Create an element to serve as the navigation bar for your application.
+Create an element to hold the logo for your application. It can be as simple as text, but if you want to find an image, that's fine.
+Create a input field for a user to enter in a message.
+Add an event listener for "keypress" and detect when then return key has been pressed in the message field.
+When return key is detected, you'll create a new message (see details below).
+Create a button to clear all messages.
+When the user clicks the clear messages button, all current chat messages should be removed from the application.
+If there are no messages, then the clear messages button should be disabled (see example above).
+The navigation bar should remain at the top of the screen, even if the contents of the page start to scroll. 
+
+Create two checkboxes below the message input field. One labeled "Dark theme" and the other labeled "Large text".
+When the user clicks on the dark theme checkbox, change the background color of your application to a dark gray, and the font color for messages should be white(ish)... you pick.
+If the user unchecks the box, the background color should change back to white with black text for messages.
+
+When the user presses the return key in the message field, create a <div> element in the DOM, below the input field that will hold all messages as they get created.
+The message should have a button displayed after it with the text "Delete" inside of it.
+When the delete button next to a message is clicked, only that message should be removed from the DOM. -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatty Cathy, y'all</title>
+	<link rel="stylesheet" type="text/css" href="chatty.css">
+</head>
+
+<body id="flex-container">
+	<header class="flex-nav-bar">
+		<nav>
+	<logo>
+		<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRx1ELURBegCGvilf94AWMxHHvcr42EuOjIMvyH_GeYiMUEfCW5yw" alt="Chatty Cathy Meme" width="50" height="25">
+	</logo>
+		 <input type="text" name="message-bar" placeholder="Enter Message" id="enter-message">
+		 <input type="submit" name="clear-message" value="Clear Message Board" id="clear-board">
+		 <div class="checkbox-format">
+		 	<input type="checkbox" name="dark-theme" id="dark-theme">Dark theme
+		 	<input type="checkbox" name="large-text" id="large-text">Large text
+		 </div>	
+		</nav>
+	</header>
+<!-- This is the hidden nav bar. -->
+	<!-- <header class="hidden-nav-bar">
+		<nav>
+	<logo>
+		<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRx1ELURBegCGvilf94AWMxHHvcr42EuOjIMvyH_GeYiMUEfCW5yw" alt="Chatty Cathy Meme" width="10" height="5">
+	</logo>
+		 <input type="text" name="message-bar" placeholder="Enter Message" id="enter-message">
+		 <input type="submit" name="clear-message" value="Clear Message Board" id="clear-board">
+		 <div class="checkbox-format">
+		 	<input type="checkbox" name="dark-theme" id="dark-theme">Dark theme
+		 	<input type="checkbox" name="large-text" id="large-text">Large text
+		 </div>	
+		</nav>
+	</header> -->
+
+	<label>Messages:</label>
+<section id="message-box">
+	
+	<div></div>
+			
+</section>
+
+
+
+
+
+<script type="text/javascript" src="chatty.js"></script>
+
+</body>
+
+</html>

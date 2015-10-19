@@ -1,0 +1,48 @@
+body {
+	font-size: 12px;
+}
+#flex-container {
+	padding: 0;
+  	list-style: none;
+  	display: flex;
+  	-webkit-flex-direction: row;
+  	-webkit-flex-wrap: wrap;
+  	margin-right: auto;
+  	margin-left: auto;
+}
+.flex-nav-bar {
+	flex: 1 100%;
+  	background-color: ;
+  	margin: 1em auto 1em auto;
+  	text-align: left;
+  	position: fixed;
+  	top: 0;
+  	width: 98%;
+}
+.hidden-nav-bar {
+	flex: 1 100%;
+  	background-color: ;
+  	margin: 1em 1em 1em auto;
+  	text-align: left;
+  	position: static;
+  	top: 0;
+  	width: 100%;
+  	visibility: hidden;
+}
+/*img {
+	width: 20px;
+	heigth: 10px;
+}*/
+
+section#message-box {
+	margin-top: 55px;
+	border: 2px solid black;
+}
+.dark-theme1 {
+	background-color: gray;
+	color: white;
+
+}
+.large-text {
+	font-size: 18px;
+}
