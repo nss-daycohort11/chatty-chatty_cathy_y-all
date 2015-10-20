@@ -1,48 +1,63 @@
+/*This is body styling.*/
 body {
-	font-size: 12px;
+  font-family: arial;
+  font-size: 14px;
 }
-#flex-container {
-	padding: 0;
-  	list-style: none;
-  	display: flex;
-  	-webkit-flex-direction: row;
-  	-webkit-flex-wrap: wrap;
-  	margin-right: auto;
-  	margin-left: auto;
+/*This is overall container.*/
+div#flex-main-container {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
 }
-.flex-nav-bar {
-	flex: 1 100%;
-  	background-color: ;
-  	margin: 1em auto 1em auto;
-  	text-align: left;
-  	position: fixed;
-  	top: 0;
-  	width: 98%;
+/*This is nav bar styling.*/
+header#flex-nav-bar {
+  background-color: white;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  width: 98%;
 }
-.hidden-nav-bar {
-	flex: 1 100%;
-  	background-color: ;
-  	margin: 1em 1em 1em auto;
-  	text-align: left;
-  	position: static;
-  	top: 0;
-  	width: 100%;
-  	visibility: hidden;
+header.hidden-nav-bar {
+  flex: 1 100%;
+  border: 2px solid black;
+  border-radius: 4em;
+  background-color: black;
+  margin: 1em 1em 1em auto;
+  text-align: left;
+  position: static;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
 }
-/*img {
-	width: 20px;
-	heigth: 10px;
-}*/
-
-section#message-box {
-	margin-top: 55px;
-	border: 2px solid black;
+img.logo {
+  border: 2px solid gray;
+  display: inline-block;
+  width: 40%;
+  margin-top: 10px;
+}
+#message-box {
+  border: 2px solid gray;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+div.input-style {
+  display: inline-block;
+}
+div.checkbox-format {
+    color: black;
+    margin-top: 7px;
+    margin-left: 210px;
 }
 .dark-theme1 {
-	background-color: gray;
-	color: white;
-
+  background-color: gray;
+  color: white;
 }
 .large-text {
-	font-size: 18px;
+  font-size: 22px;
 }
+

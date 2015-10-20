@@ -22,18 +22,22 @@ When the delete button next to a message is clicked, only that message should be
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Chatty Cathy, y'all</title>
 	<link rel="stylesheet" type="text/css" href="chatty.css">
 </head>
 
-<body id="flex-container">
-	<header class="flex-nav-bar">
+<body>
+<!-- navigation section -->
+	<header id="flex-nav-bar">
 		<nav>
 	<logo>
-		<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRx1ELURBegCGvilf94AWMxHHvcr42EuOjIMvyH_GeYiMUEfCW5yw" alt="Chatty Cathy Meme" width="50" height="25">
+		<img class="logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRx1ELURBegCGvilf94AWMxHHvcr42EuOjIMvyH_GeYiMUEfCW5yw" alt="Chatty Cathy Meme">
 	</logo>
+		<div class="input-style">
 		 <input type="text" name="message-bar" placeholder="Enter Message" id="enter-message">
 		 <input type="submit" name="clear-message" value="Clear Message Board" id="clear-board">
+		 </div>
 		 <div class="checkbox-format">
 		 	<input type="checkbox" name="dark-theme" id="dark-theme">Dark theme
 		 	<input type="checkbox" name="large-text" id="large-text">Large text
@@ -41,30 +45,32 @@ When the delete button next to a message is clicked, only that message should be
 		</nav>
 	</header>
 <!-- This is the hidden nav bar. -->
-	<!-- <header class="hidden-nav-bar">
+	<header class="hidden-nav-bar">
 		<nav>
 	<logo>
-		<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRx1ELURBegCGvilf94AWMxHHvcr42EuOjIMvyH_GeYiMUEfCW5yw" alt="Chatty Cathy Meme" width="10" height="5">
+		<img class="logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRx1ELURBegCGvilf94AWMxHHvcr42EuOjIMvyH_GeYiMUEfCW5yw" alt="Chatty Cathy Meme">
 	</logo>
+		<div class="input-style">
 		 <input type="text" name="message-bar" placeholder="Enter Message" id="enter-message">
 		 <input type="submit" name="clear-message" value="Clear Message Board" id="clear-board">
+		 </div>
 		 <div class="checkbox-format">
 		 	<input type="checkbox" name="dark-theme" id="dark-theme">Dark theme
 		 	<input type="checkbox" name="large-text" id="large-text">Large text
 		 </div>	
 		</nav>
-	</header> -->
+	</header>
 
-	<label>Messages:</label>
-<section id="message-box">
+<div id="main-flex-container">
+
+<label>Messages:</label>
+  <section id="message-box">
 	
-	<div></div>
+	<div class="message-board"></div>
 			
-</section>
+  </section>
 
-
-
-
+</div>
 
 <script type="text/javascript" src="chatty.js"></script>
 

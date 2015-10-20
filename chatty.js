@@ -20,6 +20,7 @@ function populateMessageBox() {
 
 enterMessage.addEventListener("keyup", function(){
 	if(event.keyCode === 13) {
+		
 		console.log("target", event);
 		populateMessageBox();
 	} 
