@@ -14,10 +14,14 @@ div#flex-main-container {
 /*This is nav bar styling.*/
 header#flex-nav-bar {
   background-color: white;
-  text-align: left;
+  text-align: center;
   position: fixed;
   top: 0;
   width: 98%;
+}
+label {
+  padding-left: 395px;
+  
 }
 header.hidden-nav-bar {
   flex: 1 100%;
@@ -32,9 +36,10 @@ header.hidden-nav-bar {
   visibility: hidden;
 }
 img.logo {
+  
   border: 2px solid gray;
-  display: inline-block;
-  width: 40%;
+  display: inline;
+  width: 100px;
   margin-top: 10px;
 }
 #message-box {

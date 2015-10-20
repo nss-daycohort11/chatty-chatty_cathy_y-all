@@ -8,9 +8,19 @@ var messageBox = document.getElementById("message-box");
 	console.log("messageBox", messageBox);
 
 function populateMessageBox() {
-
+	var monthName = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept.", "Oct.", "Nov.", "Dec."];
+	var time = new Date();
+	var year = time.getFullYear();
+	var month = time.getMonth();
+	var day = time.getDate();
+	var currentMonth = monthName[month];
+	var currentTime = day + " " + currentMonth + " " + year;
+	console.log(month, currentMonth, day);
 	var newMessage = enterMessage.value;
-	var message = newMessage + " " + "<input type='submit' name='delete-message' value='Delete' id='delete-message'>";
+	var message = newMessage + " " + " - " + currentTime + " " + "<input type='submit' name='delete-message' value='Delete' id='delete-message'>" ;
+	
+	enterMessage.value = " ";
+	console.log(enterMessage);
 //prepend 
 	populateMessage = document.createElement('div');
 	populateMessage.innerHTML = message;
@@ -54,4 +64,5 @@ largeText.addEventListener("click", function () {
 	
 	messageBox.classList.toggle("large-text");
 });
+
 
