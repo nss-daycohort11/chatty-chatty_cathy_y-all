@@ -1,3 +1,4 @@
+
 var enterMessage = document.getElementById("enter-message");
   console.log("enterMessage", enterMessage);
 
@@ -6,6 +7,22 @@ var clearBoard = document.getElementById("clear-board");
 
 var messageBox = document.getElementById("message-box");
 	console.log("messageBox", messageBox);
+
+var numOfMessages = 0;
+
+function removeFirstMessage() {
+	var messageContainer = document.getElementById("message-box");
+	console.log("messageContainer", messageContainer);
+
+	var childNode = messageContainer.childNodes.item(19);
+
+	messageContainer.removeChild(childNode);
+
+	// function removeElement(node) {
+ //    node.parentNode.removeChild(node);
+	// }
+
+}
 
 function populateMessageBox() {
 	var monthName = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept.", "Oct.", "Nov.", "Dec."];
@@ -26,7 +43,15 @@ function populateMessageBox() {
 	populateMessage.innerHTML = message;
 	messageBox.insertBefore(populateMessage, messageBox.childNodes[0]);
 
+	numOfMessages++;
+	console.log("numOfMessages", numOfMessages);
+
+	if (numOfMessages >= 20) {
+		console.log("greater than 20", numOfMessages);
+		removeFirstMessage();
+	}
 }
+
 
 enterMessage.addEventListener("keyup", function(){
 	if(event.keyCode === 13) {
