@@ -1,22 +1,22 @@
-
-var enterMessage = document.getElementById("enter-message");
+$(document).ready(function() { 
+var enterMessage = $("#enter-message");
   console.log("enterMessage", enterMessage);
 
-var clearBoard = document.getElementById("clear-board");
+var clearBoard = $("#clear-board");
   console.log("clearBoard", clearBoard);
 
-var messageBox = document.getElementById("message-box");
+var messageBox = $("#message-box");
 	console.log("messageBox", messageBox);
 
 var numOfMessages = 0;
 
 function removeFirstMessage() {
-	var messageContainer = document.getElementById("message-box");
-	console.log("messageContainer", messageContainer);
+	var messageContainer = $("#message-box");
+	// console.log("messageContainer", messageContainer);
 
-	var childNode = messageContainer.childNodes.item(19);
+	var childNode = messageContainer.children(20);
 
-	messageContainer.removeChild(childNode);
+	messageContainer.find("div:last").remove();
 }
 
 function populateMessageBox() {
@@ -28,30 +28,30 @@ function populateMessageBox() {
 	var currentMonth = monthName[month];
 	var currentTime = day + " " + currentMonth + " " + year;
 	console.log(month, currentMonth, day);
-	var newMessage = enterMessage.value;
+	var newMessage = enterMessage.val();
 	var message = newMessage + " " + " - " + currentTime + " " + "<input type='submit' name='delete-message' value='Delete' id='delete-message'>" ;
 	
-	enterMessage.value = " ";
+	enterMessage.val(" ");
 	console.log(enterMessage);
 //prepend 
-	populateMessage = document.createElement('div');
-	populateMessage.innerHTML = message;
-	messageBox.insertBefore(populateMessage, messageBox.childNodes[0]);
+	populateMessage = "<div>";
+	populateMessage += message;
+	messageBox.prepend(populateMessage);
 
 	numOfMessages++;
 	console.log("numOfMessages", numOfMessages);
 
-	if (numOfMessages >= 20) {
+	if (numOfMessages >= 21) {
 		console.log("greater than 20", numOfMessages);
 		removeFirstMessage();
 	}
 }
 
 
-enterMessage.addEventListener("keyup", function(){
-	if(event.keyCode === 13) {
-		
-		console.log("target", event);
+enterMessage.keypress(function(event){
+	if(event.which == 13) {
+		console.log("Hi Kids!!")
+		// console.log("target", event);
 		populateMessageBox();
 	} 
 	
@@ -67,22 +67,23 @@ document.querySelector("section").addEventListener("click", function(event) {
 	};
   });
 
-clearBoard.addEventListener("click", function() {
-	messageBox.innerHTML = "<div>" + " " + "</div>";
+clearBoard.click(function() {
+	messageBox.html("<div>" + " " + "</div>");
 });
 
-var darkTheme = document.getElementById("dark-theme");
+var darkTheme = $("#dark-theme");
 
-var largeText = document.getElementById("large-text");
+var largeText = $("#large-text");
 
-darkTheme.addEventListener("click", function () {
+darkTheme.click(function () {
 	
-	messageBox.classList.toggle("dark-theme1");
+	messageBox.toggleClass("dark-theme1");
 });
 
-largeText.addEventListener("click", function () {
+largeText.click(function () {
 	
-	messageBox.classList.toggle("large-text");
+	messageBox.toggleClass("large-text");
 });
 
 
+});
