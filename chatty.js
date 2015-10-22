@@ -1,17 +1,19 @@
 
-var enterMessage = document.getElementById("enter-message");
+$(document).ready(function() {
+
+var enterMessage = $("#enter-message");
   console.log("enterMessage", enterMessage);
 
-var clearBoard = document.getElementById("clear-board");
+var clearBoard = $("#clear-board");
   console.log("clearBoard", clearBoard);
 
-var messageBox = document.getElementById("message-box");
+var messageBox = $("#message-box");
 	console.log("messageBox", messageBox);
 
 var numOfMessages = 0;
 
 function removeFirstMessage() {
-	var messageContainer = document.getElementById("message-box");
+	var messageContainer = $("#message-box");
 	console.log("messageContainer", messageContainer);
 
 	var childNode = messageContainer.childNodes.item(19);
@@ -34,7 +36,7 @@ function populateMessageBox() {
 	enterMessage.value = " ";
 	console.log(enterMessage);
 //prepend 
-	populateMessage = document.createElement('div');
+	populateMessage = $('#div');
 	populateMessage.innerHTML = message;
 	messageBox.insertBefore(populateMessage, messageBox.childNodes[0]);
 
@@ -48,7 +50,7 @@ function populateMessageBox() {
 }
 
 
-enterMessage.addEventListener("keyup", function(){
+	$("#enter-message").keyup(function(event){
 	if(event.keyCode === 13) {
 		
 		console.log("target", event);
@@ -71,7 +73,7 @@ clearBoard.addEventListener("click", function() {
 	messageBox.innerHTML = "<div>" + " " + "</div>";
 });
 
-var darkTheme = document.getElementById("dark-theme");
+var darkTheme = $("dark-theme");
 
 var largeText = document.getElementById("large-text");
 
@@ -86,3 +88,6 @@ largeText.addEventListener("click", function () {
 });
 
 
+
+
+)}
