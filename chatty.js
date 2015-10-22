@@ -17,11 +17,6 @@ function removeFirstMessage() {
 	var childNode = messageContainer.childNodes.item(19);
 
 	messageContainer.removeChild(childNode);
-
-	// function removeElement(node) {
- //    node.parentNode.removeChild(node);
-	// }
-
 }
 
 function populateMessageBox() {
